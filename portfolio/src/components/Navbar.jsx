@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link as ScrollLink } from 'react-scroll';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -18,10 +18,15 @@ const Nav = styled.nav`
     height: 40px;
     padding: 10px 0;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 90%;
+    margin-inline: auto;
+    z-index: 1000;
 `;
 
 const Logo = styled.div`
-    /* border: 1px solid white; */
     width: 30px;
     height: 30px;
     display: flex;
@@ -31,25 +36,23 @@ const Logo = styled.div`
 const Ul = styled.ul`
     display: flex;
     width: 450px;
-    height:40px;
+    height: 40px;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 `;
 
-const ListItem = styled.li`
-`;
+const ListItem = styled.li``;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(ScrollLink)`
     text-decoration: none;
     color: white;
     display: flex;
-    height:30px;
+    height: 30px;
     font-weight: 300;
     align-items: center;
     font-size: 14px;
-    font-weight: ${({ isActive }) => (isActive ? 'bold' : 'normal')};
-    text-decoration: ${({ isActive }) => (isActive ? 'underline' : 'none')};
+    cursor: pointer;
 
     &:hover {
         font-weight: 700;
@@ -57,29 +60,24 @@ const StyledLink = styled(Link)`
 `;
 
 const Socials = styled.div`
-    /* border: 1px solid white; */
     height: 36px;
     width: 150px;
     border-radius: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-`
+`;
 
-const SocialLink = styled(Link)`
-    /* border: 1px solid white; */
+const SocialLink = styled.a`
     border-radius: 100%;
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-`
+`;
 
 const Navbar = () => {
-    const location = useLocation();
-    const pathname= location.pathname
-
     return (
         <Nav>
             <Logo>
@@ -87,39 +85,39 @@ const Navbar = () => {
             </Logo>
             <Ul>
                 <ListItem>
-                <StyledLink to="/" isActive={pathname === '/'}>
-                    <HomeIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
-                    Home
-                </StyledLink>
+                    <StyledLink to="home" smooth duration={500}>
+                        <HomeIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        Home
+                    </StyledLink>
                 </ListItem>
                 <ListItem>
-                <StyledLink to="/about" isActive={pathname === '/about'}>
-                    <Person2 style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
-                    About
-                </StyledLink>
+                    <StyledLink to="about" smooth duration={500}>
+                        <Person2 style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        About
+                    </StyledLink>
                 </ListItem>
                 <ListItem>
-                <StyledLink to="/projects" isActive={pathname === '/projects'}>
-                    <BorderAllIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
-                    Projects
-                </StyledLink>
+                    <StyledLink to="projects" smooth duration={500}>
+                        <BorderAllIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        Projects
+                    </StyledLink>
                 </ListItem>
                 <ListItem>
-                <StyledLink to="/contact" isActive={pathname === '/contact'}>
-                    <CallIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
-                    Contact
-                </StyledLink>
+                    <StyledLink to="contact" smooth duration={500}>
+                        <CallIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        Contact
+                    </StyledLink>
                 </ListItem>
             </Ul>
 
             <Socials>
-                <SocialLink>
+                <SocialLink href="#">
                     <LinkedInIcon style={{width: 24, height: 24, fill: 'white'}} />
                 </SocialLink>
-                <SocialLink>
+                <SocialLink href="#">
                     <FacebookIcon style={{width: 24, height: 24, fill: 'white'}} />
                 </SocialLink>
-                <SocialLink>
+                <SocialLink href="#">
                     <XIcon style={{width: 24, height: 24, fill: 'white'}} />
                 </SocialLink>
             </Socials>

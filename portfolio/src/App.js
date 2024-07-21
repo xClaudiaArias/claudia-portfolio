@@ -8,6 +8,12 @@ import Footer from './components/Footer';
 import Projects from './components/Projects';
 import styled from 'styled-components';
 
+const Section = styled.section`
+    height: 100vh; /* Adjust based on your design */
+    padding: 20px;
+`;
+
+
 const AppContainer = styled.div`
   width: 90%;
   margin-inline: auto;
@@ -18,15 +24,19 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-      </BrowserRouter>
+      <Navbar />
+      <Section id="home">
+          <Home />
+      </Section>
+      <Section id="about">
+          <About />
+      </Section>
+      <Section id="projects">
+          <Projects />
+      </Section>
+      <Section id="contact">
+          <Contact />
+      </Section>
     </AppContainer>
   );
 }
