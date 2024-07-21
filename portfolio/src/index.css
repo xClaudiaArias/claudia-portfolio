@@ -3,4 +3,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   cursor: url('../src/assets/images/tm-cursor.png') 16 16, auto;
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
 }
