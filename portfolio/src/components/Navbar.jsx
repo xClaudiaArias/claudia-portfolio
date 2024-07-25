@@ -14,12 +14,11 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     height: 40px;
     padding: 10px 0;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     max-width: 90%;
     margin-inline: auto;
