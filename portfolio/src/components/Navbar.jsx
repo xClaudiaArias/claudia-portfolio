@@ -10,6 +10,16 @@ import BorderAllIcon from '@mui/icons-material/BorderAll';
 import CallIcon from '@mui/icons-material/Call';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
+import CA_logo from '../assets/images/Ca-logo.png'
+import about_icon from '../assets/images/About.png'
+import contact_icon from '../assets/images/Contact-logo.png'
+import home_icon from '../assets/images/Home.png'
+import hand_icon from '../assets/images/Hand.png'
+import bottom_hand_sparkle from '../assets/images/Hand-sparkle-bottom.png'
+import top_hand_sparkle from '../assets/images/Hand-sparkle-top.png'
+import down_arrow from '../assets/images/Down-arrow.png'
+import project_icon from '../assets/images/Project-logo.png'
+
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -76,34 +86,41 @@ const SocialLink = styled.a`
     align-items: center;
 `;
 
+const NavIcons = styled.img`
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 10px;
+`
+
 const Navbar = () => {
     return (
         <Nav>
             <Logo>
-                <CloudQueueIcon style={{width: 24, height: 24, fill: 'white'}} />
+                <NavIcons src={CA_logo} alt="Claudia's logo"/>
             </Logo>
             <Ul>
                 <ListItem>
                     <StyledLink to="home" smooth duration={500}>
-                        <HomeIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        <NavIcons src={home_icon} alt="home icon" />
                         Home
                     </StyledLink>
                 </ListItem>
                 <ListItem>
                     <StyledLink to="about" smooth duration={500}>
-                        <Person2 style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        <NavIcons src={about_icon} alt="about icon" />
                         About
                     </StyledLink>
                 </ListItem>
                 <ListItem>
                     <StyledLink to="projects" smooth duration={500}>
-                        <BorderAllIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        <NavIcons src={project_icon} alt="project icon" />
                         Projects
                     </StyledLink>
                 </ListItem>
                 <ListItem>
                     <StyledLink to="contact" smooth duration={500}>
-                        <CallIcon style={{width: 24, height: 24, fill: 'white', paddingRight: 10}} />
+                        <NavIcons src={contact_icon} alt="contact icon" />
                         Contact
                     </StyledLink>
                 </ListItem>
