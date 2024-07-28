@@ -1,10 +1,8 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import Projects from './components/Projects';
 import styled from 'styled-components';
 
@@ -12,7 +10,6 @@ const Section = styled.section`
     height: 100vh; /* Adjust based on your design */
     padding: 20px;
 `;
-
 
 const AppContainer = styled.div`
   width: 90%;

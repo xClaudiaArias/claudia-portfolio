@@ -1,8 +1,8 @@
-import { ArrowDownwardSharp, Handshake } from '@mui/icons-material';
 import React from 'react'; 
 import styled from 'styled-components';
-import BackHandIcon from '@mui/icons-material/BackHand';
-import SouthIcon from '@mui/icons-material/South';
+import hand_icon from '../assets/images/Hand.png'
+import hand_top from '../assets/images/Hand-sparkle-top.png'
+import hand_bottom from '../assets/images/Hand-sparkle-bottom.png'
 
 const HomeContainer = styled.div`
     position: relative;
@@ -11,6 +11,9 @@ const HomeContainer = styled.div`
     text-align: center;
     background: none;
     margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const H1 = styled.h1`
@@ -39,16 +42,55 @@ const H3 = styled.h3`
     margin: 5px;
 `
 
+const HandContainer = styled.div`
+    /* border: 1px solid red; */
+    position: relative;
+    width: 150px;
+    height: 150px;
+`
+
+const Hand = styled.img`
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 35px;
+    right: 35px;
+`
+
+const HandSparkles = styled.img`
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    position: absolute;
+
+    &.top {
+        /* border: 1px solid blue; */
+        top: 20px;
+        right: 20px;
+    }
+
+    &.bottom {
+        /* border: 1px solid yellow; */
+        bottom: 20px;
+        left: 10px;
+    }
+`
+
 const Home = () => {
 
     return (
         <HomeContainer>
-            <BackHandIcon style={{fill: 'white', width: 48, height: 48}} />
+            <HandContainer>
+                <HandSparkles className='top' src={hand_top} />
+                <Hand src={hand_icon}/>
+                <HandSparkles className='bottom' src={hand_bottom} />
+            </HandContainer>
             <H3>Hello, I am</H3>
             <H1>Claudia Arias</H1>
             <H2>Web Developer</H2>
             <H3>It's very nice to meet you</H3>
-            <SouthIcon style={{fill: 'white', width: 48, height: 48}}/>
         </HomeContainer>
     );
 }

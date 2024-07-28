@@ -4,20 +4,10 @@ import { Link as ScrollLink } from 'react-scroll';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import HomeIcon from '@mui/icons-material/Home';
-import { Person2 } from '@mui/icons-material';
-import BorderAllIcon from '@mui/icons-material/BorderAll';
-import CallIcon from '@mui/icons-material/Call';
-import CloudQueueIcon from '@mui/icons-material/CloudQueue';
-
 import CA_logo from '../assets/images/Ca-logo.png'
 import about_icon from '../assets/images/About.png'
 import contact_icon from '../assets/images/Contact-logo.png'
 import home_icon from '../assets/images/Home.png'
-import hand_icon from '../assets/images/Hand.png'
-import bottom_hand_sparkle from '../assets/images/Hand-sparkle-bottom.png'
-import top_hand_sparkle from '../assets/images/Hand-sparkle-top.png'
-import down_arrow from '../assets/images/Down-arrow.png'
 import project_icon from '../assets/images/Project-logo.png'
 
 const Nav = styled.nav`
