@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
 import Clau from '../assets/images/Clau.jpg';
 import ibm_logo from '../assets/images/ibm-logo.png';
 import ga_logo from '../assets/images/ga.png';
@@ -123,51 +124,40 @@ const StatusBarBox = styled.div`
 const StatusBar = styled.div`
     height: inherit;
     border-radius: 50px;
+    transition: width 2s ease-out;
 
     &.html {
         background-color: #ffab6f;
-        width: 95%;
     }
     &.css {
         background-color: #6767ff;
-        width: 89%;
     }
     &.js {
         background-color: #ffff92;
-        width: 88%;
     }
     &.react {
         background-color: #78edff;
-        width: 76%;
     }
     &.english {
         background-color: #ff87e9;
-        width: 97%;
     }
     &.ruby {
         background-color: #ff7c6b;
-        width: 70%;
     }
     &.express {
         background-color: #c5d6c1;
-        width: 85%;
     }
     &.spanish {
         background-color: #c9aaff;
-        width: 100%;
     }
     &.mongodb {
         background-color: #78c278;
-        width: 77%;
     }
     &.sql {
         background-color: #bcf3ff;
-        width: 87%;
     }
-
     &.python {
         background-color: #aeffac;
-        width: 85%;
     }
 `;
 
@@ -204,6 +194,11 @@ const CertificateImg = styled.img`
 `;
 
 const About = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1
+    });
+
     return (
         <Container>
             <Heading>Get to know me</Heading>
@@ -265,7 +260,7 @@ const About = () => {
                     </IdCardContainer>
                 </Left>
 
-                <Right>
+                <Right ref={ref}>
                     <H2>My Journey</H2>
                     <Label>
                         My journey into web development started with a <Span>web design class at Lehman College</Span> while I was pursuing an undergraduate degree in Studio Arts. My curiosity about how websites are created grew, leading me to explore web design on my own for a few years. After much consideration, I decided to shift careers and <Span>enrolled in web development programs at Per Scholas and General Assembly, completing an intensive 18-week course.</Span> Following my passion, I furthered my education by enrolling in <Span> a master's program in computer science at Mercy University.</Span> Here, I honed my skills, delving into the software development life cycle, database management, and quality assurance. I am now eager to showcase my skills and knowledge in a dynamic and supportive environment.
@@ -277,61 +272,61 @@ const About = () => {
                         <Skill>
                             <Label className="skill-label html">HTML</Label>
                             <StatusBarBox>
-                                <StatusBar className="html"></StatusBar>
+                                <StatusBar className="html" style={{ width: inView ? '95%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label css">CSS</Label>
                             <StatusBarBox>
-                                <StatusBar className="css"></StatusBar>
+                                <StatusBar className="css" style={{ width: inView ? '89%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label js">Javascript</Label>
                             <StatusBarBox>
-                                <StatusBar className="js"></StatusBar>
+                                <StatusBar className="js" style={{ width: inView ? '88%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label react">React</Label>
                             <StatusBarBox>
-                                <StatusBar className="react"></StatusBar>
+                                <StatusBar className="react" style={{ width: inView ? '76%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label python">Python</Label>
                             <StatusBarBox>
-                                <StatusBar className="python"></StatusBar>
+                                <StatusBar className="python" style={{ width: inView ? '85%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label sql">SQL</Label>
                             <StatusBarBox>
-                                <StatusBar className="sql"></StatusBar>
+                                <StatusBar className="sql" style={{ width: inView ? '87%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label mongodb">MongoDB</Label>
                             <StatusBarBox>
-                                <StatusBar className="mongodb"></StatusBar>
+                                <StatusBar className="mongodb" style={{ width: inView ? '77%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label ruby">Ruby</Label>
                             <StatusBarBox>
-                                <StatusBar className="ruby"></StatusBar>
+                                <StatusBar className="ruby" style={{ width: inView ? '70%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label english">English</Label>
                             <StatusBarBox>
-                                <StatusBar className="english"></StatusBar>
+                                <StatusBar className="english" style={{ width: inView ? '97%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                         <Skill>
                             <Label className="skill-label spanish">Spanish</Label>
                             <StatusBarBox>
-                                <StatusBar className="spanish"></StatusBar>
+                                <StatusBar className="spanish" style={{ width: inView ? '100%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
                     </Skillset>

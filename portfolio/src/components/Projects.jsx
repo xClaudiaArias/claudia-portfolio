@@ -30,7 +30,7 @@ const ProjectCard = styled.div`
     justify-content: flex-end;
     border-radius: 8px;
     &.instant {
-        background: url(${instant});
+        background: url(${instant3});
         background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@ const ProjectCard = styled.div`
     background-repeat: no-repeat;
     }
     &.instant3 {
-        background: url(${instant3});
+        background: url(${instant});
         background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
