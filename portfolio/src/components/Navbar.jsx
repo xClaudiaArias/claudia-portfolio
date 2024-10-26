@@ -4,23 +4,18 @@ import { Link as ScrollLink } from 'react-scroll';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import CA_logo from '../assets/images/Ca-logo.png'
-import about_icon from '../assets/images/About.png'
-import contact_icon from '../assets/images/Contact-logo.png'
-import home_icon from '../assets/images/Home.png'
-import project_icon from '../assets/images/Project-logo.png'
+import CA_logo from '../assets/images/Ca-logo.png';
 
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background: black;
     height: 40px;
     padding: 10px 0;
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 90%;
     margin-inline: auto;
     z-index: 1000;
 `;
@@ -30,6 +25,7 @@ const Logo = styled.div`
     height: 30px;
     display: flex;
     align-items: center;
+    padding-left: 25px;
 `;
 
 const Ul = styled.ul`
@@ -63,8 +59,10 @@ const Socials = styled.div`
     width: 150px;
     border-radius: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 12px;
     align-items: center;
+    margin-right: 20px;
 `;
 
 const SocialLink = styled.a`
@@ -92,25 +90,21 @@ const Navbar = () => {
             <Ul>
                 <ListItem>
                     <StyledLink to="home" smooth duration={500}>
-                        <NavIcons src={home_icon} alt="home icon" />
                         Home
                     </StyledLink>
                 </ListItem>
                 <ListItem>
                     <StyledLink to="about" smooth duration={500}>
-                        <NavIcons src={about_icon} alt="about icon" />
                         About
                     </StyledLink>
                 </ListItem>
                 <ListItem>
                     <StyledLink to="projects" smooth duration={500}>
-                        <NavIcons src={project_icon} alt="project icon" />
                         Projects
                     </StyledLink>
                 </ListItem>
                 <ListItem>
                     <StyledLink to="contact" smooth duration={500}>
-                        <NavIcons src={contact_icon} alt="contact icon" />
                         Contact
                     </StyledLink>
                 </ListItem>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import instant from '../assets/images/instant.png'
 import instant2 from '../assets/images/instant-2.png'
@@ -7,6 +8,9 @@ import instant3 from '../assets/images/instant-3.png'
 const Container = styled.div`
     margin-top: 80px;
     color: white;
+`
+const LinkButton =  styled.a`
+    
 `
 
 const Heading = styled.h1`
@@ -24,7 +28,7 @@ const ProjectCards = styled.div`
 const ProjectCard = styled.div`
     height: 600px;
     width: 450px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -102,6 +106,10 @@ const Button1 = styled.button`
     border: none;
     font-weight: 16px;
     cursor: pointer;
+
+    &:hover {
+        background-color: #d6d6d6;
+    }
 `
 
 const Button2 = styled.button`
@@ -113,6 +121,10 @@ const Button2 = styled.button`
     height: 38px;
     font-weight: 16px;
     cursor: pointer;
+
+    &:hover {
+        background-color: #323232;
+    }
 `
 const Marquee = styled.div`
     width: 100%;
@@ -263,8 +275,12 @@ const Projects = () => {
                             </MarqueeBox>
                         </Marquee>
                         <ProjectBtns>
-                            <Button1>Live Demo</Button1>
-                            <Button2>Guthub</Button2>
+                            <LinkButton href="https://cast-weather-app-7dfad298adef.herokuapp.com/" target="_blank">
+                                <Button1>Live Demo</Button1>
+                            </LinkButton>
+                            <LinkButton href="https://github.com/xClaudiaArias/cast" target="_blank">
+                                <Button2>Github</Button2>
+                            </LinkButton>
                         </ProjectBtns>
                     </ProjectInfo>
                 </ProjectCard>
@@ -292,7 +308,9 @@ const Projects = () => {
                         </Marquee>
                         <ProjectBtns>
                             <Button1>Live Demo</Button1>
-                            <Button2>Guthub</Button2>
+                            <LinkButton href="https://github.com/xClaudiaArias/chiquita" target="_blank">
+                                <Button2>Github</Button2>
+                            </LinkButton>
                         </ProjectBtns>
                     </ProjectInfo>
                 </ProjectCard>
@@ -319,8 +337,12 @@ const Projects = () => {
                             </MarqueeBox>
                         </Marquee>
                         <ProjectBtns>
-                            <Button1>Live Demo</Button1>
-                            <Button2>Guthub</Button2>
+                            <LinkButton href="https://todo-caps-8515a06bb2d7.herokuapp.com/" target="_blank">
+                                <Button1>Live Demo</Button1>
+                            </LinkButton>
+                            <LinkButton href="https://github.com/xClaudiaArias/TODO-Caps" target="_blank">
+                                <Button2>Github</Button2>
+                            </LinkButton>
                         </ProjectBtns>
                     </ProjectInfo>
                 </ProjectCard>

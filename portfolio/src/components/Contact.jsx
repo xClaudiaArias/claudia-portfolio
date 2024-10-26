@@ -114,6 +114,7 @@ const Textarea = styled.textarea`
 const Button = styled.button`
     width: 300px;
     background-color: white;
+    border: none;
     color: black;
     height: 40px;
     font-size: 16px;
@@ -121,6 +122,10 @@ const Button = styled.button`
     border-radius: 50px;
     align-self: center;
     cursor: pointer;
+
+    &:hover {
+        background-color: #d6d6d6;
+    }
 `
 
 const Pfp = styled.img`

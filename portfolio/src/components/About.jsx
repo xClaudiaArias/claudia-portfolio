@@ -4,12 +4,10 @@ import { useInView } from 'react-intersection-observer';
 import Clau from '../assets/images/Clau.jpg';
 import ibm_logo from '../assets/images/ibm-logo.png';
 import ga_logo from '../assets/images/ga.png';
-import CA_logo from '../assets/images/Ca-logo.png';
 
 const Container = styled.div`
     margin-top: 80px;
-    color: white;
-    height: 65vh;
+    width: 100%;
 `;
 
 const Heading = styled.h1`
@@ -31,31 +29,26 @@ const Right = styled.div`
 `;
 
 const IdCardContainer = styled.div`
-    border: 1px solid white;
     border-radius: 16px;
     background: none;
-    background-color: rgba(27, 27, 27, 0.1);
-    height: 600px;
-    width: 400px;
+    background-color: rgba(277, 277, 277, 0.1);
+    height: 530px;
+    width: 360px;
     display: flex;
     flex-direction: column;
-    padding: 15px;
     align-items: center;
+    padding: 10px 30px;
 `;
 
-const Logo = styled.img`
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-`;
 
-const H2 = styled.h2``;
+const H2 = styled.h2`
+    color: #ececec;
+`;
 
 const Pfp = styled.img`
-    width: 140px;
-    height: 140px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    border: 1px solid white;
     margin-bottom: 30px;
     object-fit: cover;
 `;
@@ -68,15 +61,17 @@ const Inputs = styled.div`
 
 const Input = styled.div`
     width: 100%;
-    margin-bottom: -10px;
-    margin-top: 40px;
+    margin-bottom: -15px;
+    color: #ececec;
 `;
 
 const Label = styled.p`
     width: 100%;
+    color: #e5e5e5;
 
     &.id-label {
-        border-top: 1px solid white;
+        border-top: 1px solid #B0B0B0;
+        color: gray;
     }
     &.righty {
         text-align: right;
@@ -86,6 +81,7 @@ const Label = styled.p`
     }
 `;
 
+// id card 
 const InfoBox = styled.div`
     width: 380px;
     display: flex;
@@ -93,15 +89,17 @@ const InfoBox = styled.div`
 `;
 
 const Skillset = styled.div`
-    height: 250px;
+    height: 146px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 `;
 
+
 const Skill = styled.div`
     display: flex;
     align-items: center;
+    height: 16px;
 `;
 
 const Span = styled.span`
@@ -162,11 +160,15 @@ const StatusBar = styled.div`
 `;
 
 const Certificates = styled.div`
+
+`;
+
+const Certs = styled.div`
     width: 100%;
     height: 40px;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 5px;
 `;
 
 const Para = styled.p`
@@ -177,7 +179,7 @@ const Para = styled.p`
 `;
 
 const Certificate = styled.div`
-    background-color: white;
+    background-color: #B0B0B0;
     color: black;
     width: 400px;
     height: 50px;
@@ -205,54 +207,53 @@ const About = () => {
             <Divs>
                 <Left>
                     <IdCardContainer>
-                        <Logo src={CA_logo} alt="Claudia Logo"></Logo>
                         <H2>Identification Card</H2>
-                        <Pfp src={Clau} alt="Claudia picture black and white"></Pfp>
+                        <Pfp src={Clau} alt="Claudia picture black and #cecece"></Pfp>
 
                         <InfoContainer>
-                            <Input></Input>
+                            <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece'}}>008088108888</Input>
                             <Label className="id-label">Identification number</Label>
 
                             <InfoBox>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece'}}>Claudia</Input>
                                     <Label className="id-label">First name</Label>
                                 </Inputs>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece', textAlign: 'right'}}>Arias</Input>
                                     <Label className="righty id-label">Last name</Label>
                                 </Inputs>
                             </InfoBox>
 
                             <InfoBox>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece'}}>Female</Input>
                                     <Label className="id-label">Gender</Label>
                                 </Inputs>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece', textAlign: 'right'}}>She/Her</Input>
                                     <Label className="righty id-label">Pronouns</Label>
                                 </Inputs>
                             </InfoBox>
 
                             <InfoBox>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece'}}>New York</Input>
                                     <Label className="id-label">City</Label>
                                 </Inputs>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece'}}>NY</Input>
                                     <Label className="id-label">State</Label>
                                 </Inputs>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{letterSpacing: 3, fontSize: 16, fontFamily: 'M PLUS Code Latin, monospace', color: '#cecece', textAlign: 'right'}}>U.S.A</Input>
                                     <Label className="righty id-label">Country</Label>
                                 </Inputs>
                             </InfoBox>
 
                             <InfoBox>
                                 <Inputs>
-                                    <Input></Input>
+                                    <Input style={{ letterSpacing: 2, fontSize: 18, fontFamily: 'Pacifico, cursive', color: '#cecece'}}>Claudia Arias</Input>
                                     <Label className="id-label">Signature</Label>
                                 </Inputs>
                             </InfoBox>
@@ -262,7 +263,7 @@ const About = () => {
 
                 <Right ref={ref}>
                     <H2>My Journey</H2>
-                    <Label>
+                    <Label style={{color: '#B4B4B4'}}>
                         My journey into web development started with a <Span>web design class at Lehman College</Span> while I was pursuing an undergraduate degree in Studio Arts. My curiosity about how websites are created grew, leading me to explore web design on my own for a few years. After much consideration, I decided to shift careers and <Span>enrolled in web development programs at Per Scholas and General Assembly, completing an intensive 18-week course.</Span> Following my passion, I furthered my education by enrolling in <Span> a master's program in computer science at Mercy University.</Span> Here, I honed my skills, delving into the software development life cycle, database management, and quality assurance. I am now eager to showcase my skills and knowledge in a dynamic and supportive environment.
                     </Label>
 
@@ -317,33 +318,24 @@ const About = () => {
                                 <StatusBar className="ruby" style={{ width: inView ? '70%' : '0%' }}></StatusBar>
                             </StatusBarBox>
                         </Skill>
-                        <Skill>
-                            <Label className="skill-label english">English</Label>
-                            <StatusBarBox>
-                                <StatusBar className="english" style={{ width: inView ? '97%' : '0%' }}></StatusBar>
-                            </StatusBarBox>
-                        </Skill>
-                        <Skill>
-                            <Label className="skill-label spanish">Spanish</Label>
-                            <StatusBarBox>
-                                <StatusBar className="spanish" style={{ width: inView ? '100%' : '0%' }}></StatusBar>
-                            </StatusBarBox>
-                        </Skill>
                     </Skillset>
 
                     <Certificates>
-                        <Certificate>
-                            <CertificateImg src={ga_logo}></CertificateImg>
-                            <Para className="certPara">
-                                Web Developement Immersive <Span className="year">2019</Span>
-                            </Para>
-                        </Certificate>
-                        <Certificate>
-                            <CertificateImg src={ibm_logo}></CertificateImg>
-                            <Para className="certPara">
-                                IBM Data Science Practitioner <Span className="year">2024</Span>
-                            </Para>
-                        </Certificate>
+                        <H2>Certificates</H2>
+                        <Certs>
+                            <Certificate>
+                                <CertificateImg src={ga_logo}></CertificateImg>
+                                <Para className="certPara">
+                                    Web Developement Immersive <Span className="year">2019</Span>
+                                </Para>
+                            </Certificate>
+                            <Certificate>
+                                <CertificateImg src={ibm_logo}></CertificateImg>
+                                <Para className="certPara">
+                                    IBM Data Science Practitioner <Span className="year">2024</Span>
+                                </Para>
+                            </Certificate>
+                        </Certs>
                     </Certificates>
                 </Right>
             </Divs>

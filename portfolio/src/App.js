@@ -12,7 +12,7 @@ const Section = styled.section`
 `;
 
 const AppContainer = styled.div`
-  width: 90%;
+  /* width: 90%; */
   margin-inline: auto;
   position: relative;
   overflow: hidden;

@@ -187,7 +187,7 @@ const Home = () => {
                     <H2 style={{fontFamily: 'Covered By Your Grace, cursive', color: 'green'}} className='h25'>Human</H2>
                 </H2Box>
             </H2Container>
-            <H3>It's very nice to meet you</H3>
+            <H3>It's very nice to meet you!</H3>
         </HomeContainer>
     );
 }
