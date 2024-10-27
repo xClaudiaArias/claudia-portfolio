@@ -1,0 +1,11 @@
+{
+  "name": "claudia-portfolio",
+  "version": "1.0.0",
+  "description": "Personal profolio site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
