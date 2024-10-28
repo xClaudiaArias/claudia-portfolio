@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import instant from '../assets/images/instant.png'
 import instant2 from '../assets/images/instant-2.png'
